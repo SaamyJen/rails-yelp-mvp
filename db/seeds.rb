@@ -7,3 +7,23 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+puts "Cleaning database...⌛️"
+Restaurant.destroy_all
+
+# 2. Create the instances 🏗️
+puts "Creating restaurants...⌛️"
+Restaurant.create!(name: "Dishoom", address: "7 Boundary St, London E2 7JE", rating: 5)
+puts "Created Dishoom"
+
+Restaurant.create!(name: "Pizza East", address: "56A Shoreditch High St, London E1 6PQ", rating: 4)
+puts "Created Pizza East"
+puts "Creating restaurants...⌛️"
+
+Restaurant.create!(name: "Sabor", address: "7 Boundary St, London E2 7JE", rating: 5)
+puts "Created Dishoom"
+
+Restaurant.create!(name: "Pizza South", address: "56A Shoreditch High St, London E1 6PQ", rating: 4)
+puts "Created Pizza East"
+
+# 3. Display a message 🎉
+puts "Finished! Created #{Restaurant.count} restaurants."
